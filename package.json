@@ -1,20 +1,21 @@
 {
-  "naem": "wetube",
-  "name": "wetube2",
-  "version": "1.0.0",
-  "description": "The best way to watch vidoes",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SmartEyears/wetube2.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SmartEyears/wetube2/issues"
-  },
-  "homepage": "https://github.com/SmartEyears/wetube2#readme"
+    "name": "wetube2",
+    "version": "1.0.0",
+    "description": "The best way to watch vidoes",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SmartEyears/wetube2.git"
+    },
+    "scripts": {
+        "win": "node index.js"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SmartEyears/wetube2/issues"
+    },
+    "homepage": "https://github.com/SmartEyears/wetube2#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
