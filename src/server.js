@@ -5,7 +5,7 @@ const app = express();
 const PORT = 4000;
 
 const gossipMiddleware = (req, res, next) => {
-    console.log("i am middle");
+    console.log(`Some one going to ${req.url}`);
     next();
 };
 
@@ -17,7 +17,8 @@ const handleLogin = (req, res) => {
     return res.send("Login Here!");
 }
 
-app.get("/", gossipMiddleware, handleHome);
+app.use(gossipMiddleware);
+app.get("/", handleHome);
 app.get("/login", handleLogin);
 
 const hadleListening = () => console.log(`✅ Server listening on port http://localhost:${PORT} 💨💨💨`);
