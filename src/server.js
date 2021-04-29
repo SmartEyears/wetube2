@@ -1,13 +1,11 @@
 import express from "express";
-
-const app = express();
+import morgan from "morgan";
 
 const PORT = 4000;
 
-const gossipMiddleware = (req, res, next) => {
-    console.log(`Some one going to ${req.url}`);
-    next();
-};
+const app = express();
+
+const logger = morgan("dev");
 
 const handleHome = (req, res) => {
     return res.send("I still love you! ❤❤");
@@ -17,7 +15,7 @@ const handleLogin = (req, res) => {
     return res.send("Login Here!");
 }
 
-app.use(gossipMiddleware);
+app.use(logger);
 app.get("/", handleHome);
 app.get("/login", handleLogin);
 
