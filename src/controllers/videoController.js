@@ -48,7 +48,7 @@ export const upload = (req, res) => res.send("upload");
 export const deleteVideo = (req, res) => res.send("Delete Video");
 
 export const getUpload = (req, res) => {
-    return res.render("/upload");
+    return res.render("upload", { pageTitle: "Upload Video" });
 };
 
 export const postUpload = (req, res) => {
